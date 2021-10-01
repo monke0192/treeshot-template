@@ -1,0 +1,17 @@
+# Template file for 'treeshot'
+pkgname=treeshot
+version=1.1
+revision=1
+depends="maim ImageMagick"
+short_desc="L3af's mediocre screenshot tool"
+maintainer="Aaron Chen <monke@monke.moe>"
+license="MIT"
+homepage="https://github.com/L3afMe/treeshot"
+distfiles="https://github.com/L3afMe/${pkgname}/archive/refs/tags/v${version}.tar.gz"
+checksum="d64883336e9a0aa35eb253d1bdc12a350a6e7bb766f242569fe07c358f084779"
+
+do_install() {
+	vbin src/treeshot
+	vlicense LICENSE
+ 	vman man/treeshot.1
+}
